@@ -1,0 +1,127 @@
+.Button
+  border: 1px solid rgba(0, 0, 0, 0.1)
+  border-radius: 3px
+  background-color: $grey-fill
+  color: $primary-header-color
+  padding: 6px 9px
+  cursor: pointer
+  outline: none
+  font-size: 14px
+  font-weight: 500
+  transition: background-color .2s ease
+
+  &:disabled
+    cursor: default
+    opacity: 0.65
+
+  &:not(:disabled):hover
+    background-color: $offwhite-hover
+    color: $black
+
+  &_contextual
+    border-top-right-radius: 0
+    border-bottom-right-radius: 0
+    vertical-align: middle
+
+  &_link
+    display: inline-block
+
+  &_success
+    background-color: $success
+    color: $white
+
+    &:not(:disabled):hover
+      background-color: $success-hover
+      color: $white
+
+  &_warn
+    background-color: $neonCarrot
+    color: $white
+
+    &:not(:disabled):hover
+      background-color: $neonCarrot-hover
+      color: $white
+
+  &_error
+    background-color: $error
+    color: $white
+
+    &:not(:disabled):hover
+      background-color: $error-hover
+      color: $white
+
+  &_small
+    padding: 4px 10px
+    font-size: 14px
+
+  &_large
+    padding: 8px 14px
+    font-size: 16px
+
+  &_primary
+    background-color: $blue
+    color: $white
+
+    &:not(:disabled):hover
+      background-color: $blue-hover
+      color: $white
+
+  &_tertiary, &_muted
+    background: none
+    border: none
+    font-weight: 600
+    padding: 0
+    color: $blue
+
+    &:not(:disabled):hover
+      background: none
+      color: $blue-hover
+
+  &_muted
+    color: $metagray
+
+    &:not(:disabled):hover
+      background: none
+      color: $metagray-hover
+
+  &__content
+    display: flex
+    justify-content: center
+
+  &__icon
+    font-size: 16px
+    padding: 0 4px
+    position: relative
+    top: 2px
+
+    .Button_small &
+      font-size: 12px
+      padding: 0 2px
+
+    &_small
+      font-size: 14px
+      padding: 0
+
+    &_left
+      margin-right: 8px
+
+      .Button_small &
+        margin-right: 4px
+
+    &_right
+      margin-left: 8px
+
+      .Button_small &
+        margin-left: 4px
+
+  &__title
+    flex-grow: 1
+
+  &__contextMenu
+    border-radius: 0 3px 3px 0
+    border-left: none
+    padding-left: 4px
+    padding-right: 2px
+    font-size: 10px
+    letter-spacing: 1px
+    vertical-align: middle
